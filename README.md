@@ -8,9 +8,11 @@
 ## **스터디 방법 및 규칙**
 
 * :calendar: 스케줄
-
+<div align="center">
+ 
 <img width="600" alt="Screen Shot 2022-09-19 at 6 16 50 PM" src="https://user-images.githubusercontent.com/87407504/190987625-a1e69272-4191-4e89-8f53-1197126c0a03.png">
 
+</div>
 
 * :book: 학습 방법
   * 1회독 완료일 : 우테코 서류 지원일 (10.23.)
@@ -25,9 +27,13 @@
 
 <details>
 <summary>  눌러서 확인 (click 👈)  </summary>
+
+ <div align="center">
  
  ![KakaoTalk_Photo_2022-09-21-16-30-33](https://user-images.githubusercontent.com/87407504/191442538-ed0de708-0dcf-48c1-8d3e-856a9b124f3f.jpeg)
 
+ </div>
+  
 </details>
     
 ## **스터디 일정('22.09.21. ~ '22.10.25.)**
