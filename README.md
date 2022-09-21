@@ -28,7 +28,7 @@
  
  ![KakaoTalk_Photo_2022-09-21-16-30-33](https://user-images.githubusercontent.com/87407504/191442538-ed0de708-0dcf-48c1-8d3e-856a9b124f3f.jpeg)
 
-</ details>
+</details>
     
 ## **스터디 일정('22.09.21. ~ '22.10.25.)**
 * 자바의 정석 (Chapter 16)
