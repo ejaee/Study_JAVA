@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Java_String {
+class Java_string {
 	public static void main(String[] args) {
 		String[] name = new String[3]; 
 		// String 배열 타입의 선언도 동일하다 
@@ -15,7 +15,7 @@ class Java_String {
 		String[] name2 = new String[] {"choi", "e", "jae"};
 		// 생략 가능 
 		String[] name3 = {"choi", "e", "jae"};
-		// String 은 Class이다?! -> 따라서 원래 이하와 같이 new 연산자로 객체를 생성한다 
+		// String 은 Class 이다?! -> 따라서 원래 이하와 같이 new 연산자로 객체를 생성한다 
 		String[] name4 = new String[3];
 		name4[0] = new String("choi");
 		name4[1] = new String("e");
@@ -122,7 +122,7 @@ class Java_String {
 		// 마지막 차수 길이를 지정하지 않고 유동적인 가변 배열 구성이 가능 
 		int[][] score1 = new int[5][];
 		
-		// 각 행마다 다른 길이의 배열 생성이 가
+		// 각 행마다 다른 길이의 배열 생성이 가능함 
 		score1[0] = new int[4];
 		score1[1] = new int[2];
 		score1[2] = new int[2];
