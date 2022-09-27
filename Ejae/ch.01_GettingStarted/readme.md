@@ -6,7 +6,7 @@
 
 ## **Java 컴파일 과정**
 
-![캡처](./pictures/1.png){: width="10" height="10"}
+![캡처](./pictures/1.png)
 
 1. 개발자가 자바 소스코드(.java)를 작성
 
