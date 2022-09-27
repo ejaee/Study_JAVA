@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-import org.w3c.dom.css.CSSImportRule;
+import java.util.*;
 
 class Java_String {
 	public static void main(String[] args) {
@@ -141,6 +139,7 @@ class Java_String {
 		};
 		System.out.println();
 		/* ============================================== */
+		// 예시 1) 
 		final int SIZE = 10;
 		int x = 0, y = 0;
 		
@@ -182,14 +181,152 @@ class Java_String {
 			}
 			
 			board[x][y]= shipBoard[x-1][y-1] == 1 ? 'O' : 'X';
+			
 			for (int i = 0; i < SIZE; i++)
-				System.out.println(board[i]);
+				System.out.println(board[i]); 
+			// println 메서드로 1차원 char 배열의 참조변수를 출력하면 
+			// 아래의 2차 for 문을 한번만 사용해배열의 모든 요소를 한 줄로 출력한다  
+//			for (int i = 0; i < SIZE; i++) { 
+//				for (int j = 0; j < SIZE; j++)
+//					System.out.print(board[i][j]);
+//				System.out.println();
+//			}
+		}
+		System.out.println("--- end ---");
+		// 공백이 출력되지 않는데 무슨 문제지???? p222  
+		
+		/* ============================================== */
+		// 예시 2) 
+		System.out.println();
+		final int SIZE2 = 5;
+		int x4 = 0, y4 = 0, num = 0;
+		
+		int[][] bingo = new int[SIZE2][SIZE2];
+		Scanner scanner2 = new Scanner(System.in);
+		
+		// 배열 요소를 1부터 SIZE * SIZE까지의 숫자로 초기화하는 SKILL 
+		for (int i = 0; i < SIZE2; i++)
+			for (int j = 0; j < SIZE2; j++)
+				bingo[i][j]= i*SIZE2 + j + 1; 
+		System.out.println("--- Default ---");
+		for (int i = 0; i < SIZE2; i++)
+			System.out.println(Arrays.toString(bingo[i]));
+		// int[] 을 출력하면 주소가 나온다 
+		// 배열의 요소를 반환하는 메서드 Arrays.toString (ch.05-1)
+		
+		// 배열의 값 뒤섞기 
+		// 배열 Suffle 의 중점 : 난수를 받아 배열의 idx로 활용한다 
+		for (int i = 0; i < SIZE2; i++)
+			for (int j = 0; j < SIZE2; j++) {
+				x = (int)(Math.random() * SIZE2);
+				y = (int)(Math.random() * SIZE2);
+				
+				int tmp = bingo[i][j];
+				bingo[i][j]= bingo[x][y];
+				bingo[x][y]= tmp; 
+			}
+		System.out.println();
+		System.out.println("--- Shuffle ---");
+//		for (int i = 0; i < SIZE2; i++) 이쁘게 안나온다 printf 활용하자 
+//			System.out.println(Arrays.toString(bingo[i]));
+	
+		do {
+			// 현재 bingo 판 현황을 보여주는 code 
+			for (int i = 0; i<SIZE2; i++) {
+				for(int j = 0; j <SIZE2; j++)
+					System.out.printf("%2d|", bingo[i][j]);
+				System.out.println();
+			}
+			System.out.println();
+		
+			System.out.printf("1 ~ %d의 숫자를 입력하라. (종료:0)>", SIZE2*SIZE2);
+			String tmp3 = scanner.nextLine();
+			num = Integer.parseInt(tmp3);
+		
+			// 입력받은 숫자와 같은 숫자가 저장된 요소를 찾아 0을 저장 
+			// 평소 무한루프를 활용했는데 아래 코드 되게 괜찮은 방법이다 
+			outer1:
+			for (int i = 0; i<SIZE2; i++) {
+				for (int j = 0; j<SIZE2; j++) {
+					if (bingo[i][j]== num) {
+						bingo[i][j]= 0;
+						break outer1;
+					}
+					System.out.println("Searching num");	
+				}
+				
+			}
+		}
+		while (num != 0);
+		
+		System.out.println("--- end ---");
+
+		/* ============================================== */
+		// 예시 3) 행렬의 곱셈  
+		// 두 행렬의 곱이 가능하려면 m1의 열(x)의 길이와 m2의 행(y)의 길이가 같아야한
+		
+		System.out.println();
+		int[][] m1 = {
+				{1, 2, 3},
+				{4, 5, 6}
+		};
+		
+		int[][] m2 = {
+				{1, 2},
+				{3, 4},
+				{5, 6}
+		};
+				
+		final int M1_Y = m1.length; // m1의 행 길이 
+		final int M2_X = m2[0].length;	// m2의 열 길이 
+		final int M2_Y = m2.length; // m2의 행 길이 
+		
+		System.out.println("[m1]");
+		for (int i = 0; i < M1_Y; i++)
+//			System.out.println(m1[i]); 주소가 나온다 
+			System.out.println(Arrays.toString(m1[i]));
+		
+		System.out.println("[m2]");
+		for (int i = 0; i < M2_Y; i++)
+//			System.out.println(m2[i]); 주소가 나온다 
+			System.out.println(Arrays.toString(m2[i]));
+		
+		int[][] m3 = new int[M1_Y][M2_X];
+		
+		for (int i = 0; i<M1_Y; i++)
+			for (int j = 0; j<M2_X; j++)
+				for (int k = 0; k<M2_Y; k++)
+					m3[i][j]+= m1[i][k]* m2[k][j];  
+		
+		System.out.println("[m1] * [m2]");
+		for (int i = 0; i<M1_Y; i++){
+			for (int j = 0; j<M2_X; j++)
+				System.out.printf("%3d |", m3[i][j]);
 			System.out.println();
 		}
-		// 뭐가 문제야...! 
+
+		/* ============================================== */
+		// 예시 4) 단어 맞추
+		// 영어 단어를 보여주고 뜻을 맞추는 게임 
 		
+		String[][] words = {
+				{"chair", "의자"},
+				{"computer", "컴퓨터"},
+				{"integer", "정수"}
+		};
 		
+		Scanner sc3 = new Scanner(System.in);
 		
-		
+		for (int i=0; i<words.length; i++) {
+			System.out.printf("Q%d. %s의 뜻은?", i+1, words[i][0]);
+//			System.out.printf("Q%d. %s의 뜻은?", i+1, words[i]);
+			// 주소가 출력된다 >> [Ljava.lang.String;@71be98f5 
+			String tmp4 = sc3.nextLine();
+			
+			if (tmp4.equals(words[i][1]))
+				System.out.printf("정답입니다.\n\n");
+			else
+				System.out.printf("오답입니다.정답은 %s입니다\n\n", words[i][1]);
+		}
 	}
 }
