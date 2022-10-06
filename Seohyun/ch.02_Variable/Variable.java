@@ -13,5 +13,7 @@ public class Variable {
         System.out.println("Then how old are you?");
         int age = Integer.parseInt(input.nextLine());
         System.out.printf("yeah~ %d years old right?", age);
+
+        input.close();
     }
 }

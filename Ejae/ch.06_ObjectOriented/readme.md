@@ -386,7 +386,7 @@ public class Student {
 
 - 한 생성자에서 다른 생성자를 호출 시 첫 줄에서만 호출 가능하다
 
-[CarTest 예시]()
+[CarTest 예시](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.06_ObjectOriented/CarTest/src/CarTest.java)
 
 _this는 `참조변수`, this()는 `생성자`_
 
