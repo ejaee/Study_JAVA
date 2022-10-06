@@ -50,9 +50,9 @@ _C언어_
 
 - `회사`에 가는 길에 `커피숍`에 들려 `아아`를 주문했다
 
-클래스는 객체의 청사진이다
 
 _해당 객체를 추상화 해서 코딩하는 것_
+
 - 학생 클래스
     ```java
     public class Student {
@@ -417,4 +417,130 @@ void    println(String x)
 
 ```
 자료형 하나하나 이름이 다를 필요 없다
+
+## 변수의 초기화
+
+멤버변수는 자동적으로 초기화된다
+
+지역변수는 사용자에 의해 초기화 되어야한다
+
+```java
+
+Class test{
+    int x; // 멤버변수
+    int y = x; // 0
+
+    testMethod() {
+        int x = 0;// 지역변수
+        int y = x;
+    }
+}
+```
+
+1. 명시적 초기화
+
+    변수 선언 동시에 초기화
+
+    ```java
+    class test {
+        int x = 0;
+        name lee = new name();
+    }
+    ```
+
+2. 초기화 블럭
+
+    클래스 초기화 블럭 - 클래스의 복잡한 초기화
+    인스턴스 초기화 블럭 - 인스턴스의 복잡한 초기화
+
+    ```java
+    class test {
+        static {/* 클래스 초기화 블럭*/}
+        {/*인스턴스 초기화 블럭*/}
+    }
+    ```
+    클래스 초기화 블럭은 메모리에 처음 로딩될 때 한번만 수행
+
+    인스턴스 초기화 블럭은 인스턴스 생성 때 마다 수행
+
+    _인스턴스 초기화 블럭은 생성자보다 먼저 수행된다_
+
+    - 클래스의 모든 생성자에 공통의 코드가 들어간 경우
+
+        ```java
+
+        test() {
+            count++;
+            serialNum = count;
+            color = "Write";
+            gearType = "Auto";
+        }
+        
+        test(String color, string gearType) {
+            count++;
+            serialNum = count;
+            this.color = color;
+            this.gearType = gaerType;
+        }
+
+    - 인스턴스 초기화 블록을 사용한 경우
+
+        ```java
+
+        {
+            count++;
+            serialNum = count;
+        }
+
+        test() {
+            color = "Write";
+            gearType = "Auto";
+        }
+        
+        test(String color, string gearType) {
+            this.color = color;
+            this.gearType = gaerType;
+        }
+        ```
+
+        재사용성을 높이고 중복성을 제거한다
+
+        _객체지향 프로그래밍의 지향점_
+
+    - 초기화 블록 예
+
+        ```java
+
+        class Block {
+
+            // 클래스 초기화 블럭
+            static{
+                System.out.println("static { }");
+            }
+            
+            // 인스턴스 초기화 블럭
+            {
+                System.out.println("{ }");
+            }
+        }
+
+        public blockTest() {
+            System.out.println("생성자");
+        }
+
+        public static void main(String args[]) {
+            System.out.println("blockTest bt = new blockTest(); ");
+            blockTest bt = new blockTest();
+
+            System.out.println("blockTest bt2 = new blockTest(); ");
+            blockTest bt2 = new blockTest();
+        }
+
+        ```
+
+        ![result.png](./Pictures/result.png)
+
+        _인스턴스 초기화 블럭은 생성자보다 먼저 수행된다_
+
+        
 
