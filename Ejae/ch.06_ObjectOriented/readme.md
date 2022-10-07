@@ -542,7 +542,7 @@ Class test{
 
         _인스턴스 초기화 블럭은 생성자보다 먼저 수행된다_
 
-[StaticBlockTest]()
+[StaticBlockTest](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.06_ObjectOriented/StaticBlockTest/src/StaticBlock.java)
 
 - 클래스변수의 초기화 시점
 
