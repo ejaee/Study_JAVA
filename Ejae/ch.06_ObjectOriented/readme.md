@@ -560,6 +560,6 @@ Class test{
 
     기본값 -> 명시적 초기화 -> 인스턴스 초기화 블럭 -> 생성자
 
-[Product](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.06_ObjectOriented/Product/src/Main.java)
+[Product](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.06_ObjectOriented/ProductTest/src/Main.java)
 
 [Document](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.06_ObjectOriented/Document/src/Main.java)
