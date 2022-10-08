@@ -19,5 +19,6 @@ public class Ex02_If {
             grade = 'F';
 
         System.out.println("당신의 학점은 " + grade + "입니다.");
+        scanner.close();
     }
 }
