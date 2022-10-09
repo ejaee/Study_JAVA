@@ -1,0 +1,9 @@
+{
+  "java.project.sourcePaths": [
+    "ch.04_ControlStatement",
+    "ch.03_Operator",
+    "ch.02_Variable",
+    "ch.01_Hello",
+    "ch.05"
+  ]
+}
