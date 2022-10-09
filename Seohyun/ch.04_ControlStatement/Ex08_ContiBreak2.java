@@ -16,6 +16,7 @@ public class Ex08_ContiBreak2 {
 
             if (menu == 0) {
                 System.out.println("프로그램을 종료합니다.");
+                scanner.close();
                 break outer;
             } else if (!(1 <= menu && menu <= 3)) {
                 System.out.println("메뉴를 잘못 선택하셨습니다.");
@@ -30,6 +31,7 @@ public class Ex08_ContiBreak2 {
                     break inner;
                 if (num == 99) {
                     System.out.println("프로그램을 종료합니다.");
+                    scanner.close();
                     break outer;
                 }    
                 switch (menu) {
@@ -45,6 +47,5 @@ public class Ex08_ContiBreak2 {
                 }
             }
         }
-        scanner.close();
     }
 }
