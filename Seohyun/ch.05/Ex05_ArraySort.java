@@ -1,4 +1,5 @@
-public class Ex05_ArraySort1 {
+public class Ex05_ArraySort {
+    //bubble sort
     public static void main(String[] args) {
         int[] numArr = new int[10];
 
