@@ -1,6 +1,6 @@
 import java.util.Scanner;
-
-public class FlowEx01 {
+// Scanner 사용하기
+public class Ex01_Scanner {
     public static void main(String[] args) {
         int input;
 
