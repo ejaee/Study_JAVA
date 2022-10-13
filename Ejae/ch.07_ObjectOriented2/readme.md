@@ -381,6 +381,10 @@ _코드의 중복을 최소화_
     class에는 `public`만 붙일 수 있다
 
     멤버들에는 `4개 모두` 가능하다
+<img width="600" alt="Screen Shot 2022-10-13 at 4 30 31 PM" src="https://user-images.githubusercontent.com/87407504/195553416-91f0ce18-a9ca-4ec0-bd36-aaed56fb31e6.png">
+
+<img width="600" alt="Screen Shot 2022-10-13 at 4 33 30 PM" src="https://user-images.githubusercontent.com/87407504/195553440-0b57720c-cc92-4f5f-b2e4-d41ef3d3dc0c.png">
+
 
 [acess_modifier]()
 
