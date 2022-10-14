@@ -50,16 +50,21 @@
 
 - 자바의 정석 (Chapter 16)
   - 0주차: 09/21~09/27
-    - [09.21(수)]() : ch.01 ~ 03 시작
+    - [ch.01](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.01_GettingStarted)
+    - [ch.02](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.02_Variable)
+    - [ch.03](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.03_Operator)
       > 변수, 연산자
+      
   - 1주차: 09/28~10/04
-    - [09.27(화)]() : ch.01 ~ 03 완료
-    - [09.28(수)]() : ch.04 ~ 05 시작
+    - [ch.04](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.04_Control_statement)
+    - [ch.05](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.05_Array)
       > 조건문/반복문, 배열
+      
   - 2주차: 10/05~10/11
-    - [10.06(목)]() : ch.06 ~ 07 시작
-    - [10.07(금)]() : .
+    - [ch.06](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.06_ObjectOriented)
+    - [ch.07](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.07_ObjectOriented2)
       > 객체지향 프로그래밍
+      
   - 3주차: 10/12~10/18
     - [10.11(화)]() : .
     - [10.12(수)]() : .
