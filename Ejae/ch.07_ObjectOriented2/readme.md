@@ -701,7 +701,7 @@ public class Time {
 
     추상메서드 사용이 가능하다
 
-[abstract_player]()
+[abstract_player](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/abstract_player/src/Main.java)
 
 - 추상 클래스의 작성
 
@@ -709,10 +709,12 @@ public class Time {
 
     유닛별로 공중, 지상, 해상 move가 각각 다르게 움직여야할 경우
 
-    [사진]
+    <img width="848" alt="Screen Shot 2022-10-14 at 8 22 15 PM" src="https://user-images.githubusercontent.com/87407504/195842123-dabf7d1b-d5cc-419c-8376-7af4d46015fe.png">
+
 
     배열에 담은 형태
+    
+    <img width="848" alt="Screen Shot 2022-10-14 at 8 26 24 PM" src="https://user-images.githubusercontent.com/87407504/195842112-bdc3cfbd-045c-4c5f-8da3-884e3103c8ac.png">
 
-    [사진]
 
-    [abstract_unit]()
+    [abstract_unit](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/abstract_unit/src/Main.java)
