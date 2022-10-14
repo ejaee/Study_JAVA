@@ -388,4 +388,218 @@ _코드의 중복을 최소화_
 
 [acess_modifier]()
 
+외부로부터 데이터를 보호하기 위해 접근 제어자를 사용한다
 
+이를 `캡슐화` 라고 한다
+
+```java
+public class Time {
+    private int hour;   // 외부에서 직접 접근 못하도록 한다
+    private int minute;
+    private int second;
+
+    public int getHour() { return hour;}
+    public void setHoir(int hour) {
+        if (hour < 0 || hour > 23) return;
+        this.hour = hour;
+    }
+    // 메서드로 간접 겁근화
+    // 즉, 캡슐화
+}
+```
+
+또한 내부적으로만 사용되는 부분을 감추기 위한 용도이기도 하다
+
+> command + opt + m (메서드 추출)
+
+[acess_modifier_encapsulation]()
+
+
+- 다형성(polymorphism)
+
+    _여러 가지 형태를 가질 수 있는 능력_
+
+    `조상 타입 참조 변수로 자손 타입 객체를 다루는 것`
+
+    ```java
+    class Tv {
+        boolean power();
+        int channel;
+
+        void power()    {power = !power;}
+        void channelUp  {++channel;}
+        void channelDown    {--channel;}
+    }
+
+    class SmartTv extends Tv {
+        String text;
+
+        void caption() { \* comment *\};
+    }
+    ```
+
+    에서 일반적인 형태는
+    
+    ```java
+    Tv a = new Tv();
+    SmartTv a = new SmartTv();
+    ```
+
+    다형성은 타입의 불일치
+
+    ```java
+    Tv a = new SmartTv();
+    ```
+    `조상 타입 참조 변수로 자손 타입 객체를 다루는 것`
+
+    1. `SmartTv a = new SmartTv();`
+
+        SmartTv 제품을 SmarTv 리모컨으로 컨트롤
+
+        리모컨 객체의 멤버는 총 5 + 2 개
+
+        리모컨 버튼이 7개인 셈
+
+    2. `Tv a = new SmartTv();`
+
+        SmartTv 제품을 Tv 리모컨으로 컨트롤
+
+        Tv 객체의 기능은 5개이므로 5가지 기능만 사용이 가능
+
+    ```java
+    SmartTv a = new Tv(); ERROR
+    ```
+    
+    참조변수의 타입이 참조변수가 참조하고 있는 인스턴스에서 사용할 수 있는 멤버의 개수를 결정한다
+
+- 참조변수의 형변환
+
+    _사용할 수 있는 멤버의 개수를 조절하는 것_
+
+    조상 자손 관계의 참조변수는 서로 형변환 가능
+
+    ```java
+    class Car {};
+    class FireEngine extends Car {};
+    class Ambulance extends Car {};
+
+    FireEngine f = new FireEngine();
+
+    Car c = (Car)f;                 // OK (생략가능)
+    FireEngine f = (FireEngine)c;   // OK (생략불가)
+    Ambulance a = (Ambulance)f      // ERROR
+    ```
+
+[Casting]()
+
+- instanceof 연산자
+
+    _형변환 가능 여부를 확인하는데 사용_
+
+    가능하면 true 반환
+
+    형변환은 조상과 자손끼리만 가능
+
+    ```java
+    void doWork(Car c) {
+        if (c instanceof FireEngine) {
+            FireEngine fe = (FireEngine)c;
+            fe.water();
+        }
+    }
+    ```
+    매개변수에는 `다형성`이 되므로
+
+    `모든 자손 클래스`가 다 들어올 수 있다
+
+    형제관계인 클래스끼리는 형변환이 되면 안되므로 `istanceof` 연산자로 확인
+
+    형변환이 가능하다는 것이지
+
+    [정리]
+
+    -   참조변수의 형변환을 하는 이유
+
+        변경을 통해 사용할 수 있는 멤버의 갯수를 조절하기 위해
+
+        형변환을 하더라도 가리키는 객체도 그래도로 값도 그대로이다
+
+        형을 맞추기위해 형변환하는 것일 뿐
+
+- 다형성의 장점
+
+    1. 다형적 매개변수
+
+        매개변수가 참조형이면 메서드 호출시, 자신과 같은 타입 또는 자손 타입의 인스턴스를 넘길 수 있다
+
+        ```java
+        // 부모
+        class Product {
+            int price;
+            int bounsPoint;
+        }
+
+        // 자손
+        class Tv extends Product{}
+        class Computer extends Product{}
+        class Audio extends Product{}
+        
+        Class Buyer {
+            int money = 1000;
+            int bounsPoint = 0;
+        }
+
+        void buy(Tv t) {
+            money -= t.price;
+            bonusPoint += t.bonusPoint;
+        }
+        
+        buy의 매개변수로 new Tv(); 를 넣어 살 수 있다
+
+        다른 물건을 사고 싶다면?
+
+        void buy(Computer c) {
+            money -= t.price;
+            bonusPoint += t.bonusPoint;
+        }
+        
+        이렇게 하면 오버로딩 (이름 같, 매개변수 다)
+
+        메서드 하나로 여러 물건을 살 수 있다!
+
+        매개변수 tv t에 computer, audio 모든 것을 넣을 수 있다!
+        ```
+
+        [polymophism]()
+
+        하나의 매개변수에 모든 상품을 적용시킬 수 있다
+
+    2. 하나의 배열로 여러종류 객체 다루기(저장 가능)
+
+        조상 타입의 배열에 자손들의 객체를 담을 수 있다
+
+        ```java
+        Product p1 = new Product();
+        Product p2 = new Product();
+        Product p3 = new Product();
+
+        Product p[] = new Product[3];
+        p[0] = new Tv();
+        p[1] = new computer();
+        p[2] = new Audio();
+        ```
+        다형성으로 인해 자식들을 모두 저장할 수 있다
+
+        [polymophism2]()
+
+        참고) 가변배열 Vector `11장`
+        ```java
+        public class Vector extends AbstractList
+                        implements List, Cloneable, java.io.Serializable{
+                            protected Object elementData[];
+                            ...
+        }
+        ```
+
+
+                        
