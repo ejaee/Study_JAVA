@@ -37,7 +37,7 @@ struct Child {
 
 _코드의 중복을 최소화_
 
-[CaptionTvTest]()
+[CaptionTvTest](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/CaptionTvTest/src/Main.java)
 
 ---
 
@@ -90,9 +90,9 @@ _코드의 중복을 최소화_
     _상속의 예 : `스포츠카`는 `자동차`이다_
 
 
-[DrawShape]()
+[DrawShape](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/DrawShape/src/Main.java)
 
-[DeckTest]()
+[DeckTest](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/DeckTest/src/Main.java)
 
 
 - 단일 상속
@@ -170,7 +170,7 @@ _코드의 중복을 최소화_
 
     오버라이딩한 경우에 super를 사용한다
 
-[super]()
+[super](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.07_ObjectOriented2/super)
 
 - super()
 
@@ -184,7 +184,7 @@ _코드의 중복을 최소화_
 
     생성한 생성자의 매개변수에 맞게 super(1, 2)로 호출하면 된다
 
-[super2]()
+[super2](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/super2/src/Main.java)
 
 ```java
     class Point{
@@ -386,7 +386,9 @@ _코드의 중복을 최소화_
 <img width="600" alt="Screen Shot 2022-10-13 at 4 33 30 PM" src="https://user-images.githubusercontent.com/87407504/195553440-0b57720c-cc92-4f5f-b2e4-d41ef3d3dc0c.png">
 
 
-[acess_modifier]()
+[access_modifier](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/access_modifier/src/Main.java)
+
+[access_modifier2](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/acces_modifier2/src/Main.java)
 
 외부로부터 데이터를 보호하기 위해 접근 제어자를 사용한다
 
@@ -412,7 +414,7 @@ public class Time {
 
 > command + opt + m (메서드 추출)
 
-[acess_modifier_encapsulation]()
+[acess_modifier_encapsulation](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/acess_modifier_encapsulation/src/Main.java)
 
 
 - 다형성(polymorphism)
@@ -490,7 +492,7 @@ public class Time {
     Ambulance a = (Ambulance)f      // ERROR
     ```
 
-[Casting]()
+[Casting](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/Casting/src/Main.java)
 
 - instanceof 연산자
 
@@ -570,7 +572,7 @@ public class Time {
         매개변수 tv t에 computer, audio 모든 것을 넣을 수 있다!
         ```
 
-        [polymophism]()
+        [polymophism](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/polymorphism/src/Main.java)
 
         하나의 매개변수에 모든 상품을 적용시킬 수 있다
 
@@ -590,7 +592,7 @@ public class Time {
         ```
         다형성으로 인해 자식들을 모두 저장할 수 있다
 
-        [polymophism2]()
+        [polymophism2](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/polymorphism2/src/Main.java)
 
         참고) 가변배열 Vector `11장`
         ```java
