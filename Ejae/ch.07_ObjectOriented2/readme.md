@@ -603,5 +603,116 @@ public class Time {
         }
         ```
 
+- 추상 클래스(abstract class)
 
-                        
+    _미완성 메서드를 갖고 있는 클래스_
+
+    미완성 설계도
+
+    ```java
+    // 추상클래스(미완성클래스)
+    abstract class Player { 
+        // 추상메서드
+        abstract void play(int pos);
+        abstract void stop(); 
+    }
+
+    abstract는 {}가 필요없다.
+    ```
+
+    abstract class를 보면 아 안에 abstract 메서드가 있겠구나
+
+    인스턴스 생성이 불가
+
+    ```java
+    Player p = new Player(); //ERROR
+    ```
+
+    그러면 이걸 왜 쓰나?
+
+    다른 클래스 작성에 도움을 주기워해(?)
+
+    상속을 통해 추상 메서드를 완성
+
+    ```java
+    class AudioPlayer extends Player {
+        void play(int pos) {/* comment*/ };
+        void stop() {/* comment*/ };
+    }
+    ```
+    자손 class에서 {}를 구현하였으므로
+
+    인스턴스 생성이 가능
+
+    ```java
+    AudioPlayer ap = new AudioPlayer();
+
+    Player ap = new AudioPlayer(); // 다형성 가능
+    Player는 추상 클래스인데 어떻게?
+
+    Player는 리모컨 버튼만 제공하므로 몸통이 없어도 무방하다
+    ```
+
+    추상 메서드는 꼭 필요하지만 자손마다 다르게 구현될 것으로 예상되는 경우 사용된다!
+
+    ```java
+    두개 다 구현한 경우
+    class AudioPlayer extends Player {
+        void play(int pos) {/* comment*/ };
+        void stop() {/* comment*/ };
+    }
+    
+    일부만 구현했음
+    abstract class AudioPlayer extends Player {
+        void play(int pos) {/* comment*/ };
+    }    
+    ```
+
+    [실질적인 예]
+    ```java
+    abstract class Player {
+        // iv
+        boolean pause;
+        int currentPos;
+
+        Player() {
+            pause = false;
+            currentPos = 0;
+        }
+
+        기기마다 플레이 방식이 다르다
+        자손마다 방식이 다르기때문에 abstract 처리
+
+        abstract void play(int pos);
+        abstract void stop();
+
+        구현안되어있으니까 상속을 받으면 내가 구현해야하구나하고 인지
+
+        // 인스턴스 메서드
+        void play() {
+            play(currentPos); // 자손이 구현하여 호출이 가능
+        }
+    }
+    ```
+
+    상속을 통해 자손이 {} 구현을 완성하고
+
+    자손 객체 생성하면
+
+    추상메서드 사용이 가능하다
+
+[abstract_player]()
+
+- 추상 클래스의 작성
+
+    추상 클래스 예시
+
+    유닛별로 공중, 지상, 해상 move가 각각 다르게 움직여야할 경우
+
+    [사진]
+
+    배열에 담은 형태
+
+    [사진]
+
+    [abstract_unit]()
