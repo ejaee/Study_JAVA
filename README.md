@@ -50,19 +50,19 @@
 
 - 자바의 정석 (Chapter 16)
   - 0주차: 09/21~09/27
-    - [ch.01](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.01_GettingStarted)
-    - [ch.02](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.02_Variable)
-    - [ch.03](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.03_Operator)
+    - [ch.01_GettingStarted](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.01_GettingStarted)
+    - [ch.02_Variable](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.02_Variable)
+    - [ch.03_Operator](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.03_Operator)
       > 변수, 연산자
       
   - 1주차: 09/28~10/04
-    - [ch.04](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.04_Control_statement)
-    - [ch.05](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.05_Array)
+    - [ch.04_Control_statement](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.04_Control_statement)
+    - [ch.05_Array](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.05_Array)
       > 조건문/반복문, 배열
       
   - 2주차: 10/05~10/11
-    - [ch.06](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.06_ObjectOriented)
-    - [ch.07](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.07_ObjectOriented2)
+    - [ch.06_ObjectOriented](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.06_ObjectOriented)
+    - [ch.07_ObjectOriented2](https://github.com/ejaee/Study_JAVA/tree/main/Ejae/ch.07_ObjectOriented2)
       > 객체지향 프로그래밍
       
   - 3주차: 10/12~10/18
