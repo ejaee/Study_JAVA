@@ -1,4 +1,4 @@
-# IntelliJ
+# :computer: IntelliJ
 
 ## 단축키
 
