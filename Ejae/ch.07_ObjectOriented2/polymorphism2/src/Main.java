@@ -13,7 +13,7 @@ class Tv1 extends Product {
         // 조상클래스의 생성자 Product(int price)를 호출한다
         super(100);
     }
-    public String toString() {return "Tv";}
+              public    String toString() {return "Tv";}
 }
 
 class Computer extends Product {
@@ -48,7 +48,7 @@ class Buyer {
                 break;
             sum += cart[i].price;
             itemList += cart[i] + ", ";
-            // cart[i] == cart[i].toString
+            // cart[i] == cart[i]   .toString
             // 추상형의 이름을 문자열로 사용하면 자동으로 .toString으로 사용된다고 생각하자
         }
         System.out.println();
