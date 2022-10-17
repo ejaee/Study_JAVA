@@ -987,9 +987,10 @@ public class Time {
 
     4. 서로 관계 없는 클래스끼리 관계를 맺어줄 수 있다
 
-        [사진]
+        <img width="848" alt="Screen Shot 2022-10-17 at 2 30 09 PM" src="https://user-images.githubusercontent.com/87407504/196097318-4e56340e-4ddd-4de7-82c1-393c82dc2f30.png">
 
-        [사진]
+        <img width="848" alt="Screen Shot 2022-10-17 at 2 33 32 PM" src="https://user-images.githubusercontent.com/87407504/196097352-7a69ca35-3453-4dcf-b335-241aca9dd1d4.png">
+
 
         매개변수에 인터페이스가 들어가 있는 것은
 
