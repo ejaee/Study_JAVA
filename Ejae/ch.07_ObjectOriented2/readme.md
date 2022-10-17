@@ -718,3 +718,282 @@ public class Time {
 
 
     [abstract_unit](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/abstract_unit/src/Main.java)
+
+- 인터페이스(interface)
+
+    _추상 메서드의 집합_
+
+    구현된 없이 전혀 없는 설계도. 껍데기(모든 멤버가 public)
+
+    기능적으로 상수, static aptjem, 디폴트 메서드가 JDK 1.8에서 추가되었음
+
+    추상 클래스와의 비교
+
+    - 일반 클래스인데 추상 메서드르르 가지고 있는 것
+    - 일부가 미완성이다
+
+    인터페이스
+
+    - 완전히 아무것도 없고 추상 메서드만 가지고 있는 것
+    - 멤버변수를 가질 수 없다
+
+    ```java
+    interface 인터페이스이름 {
+        // 상수
+        public static final 타입 상수이름 = 값;
+        // 추상메서드
+        public abstract 메서드이름;
+
+        변수(iv, cv)는 가질 수 없다
+
+        int CLOVER = 1;
+        // public static final int CLOVER = 1;
+        -> -> interface에서는 항상 모든 변수가 public이고 abstract이므로 생략 가능
+
+        public abstract String getCard();
+        String getCard();
+        // public abstract String getCard();
+        -> interface에서는 항상 모든 메서드가 public이고 abstract이므로 생략 가능
+    }
+    ```
+    모든 interface의 멤버는 public
+
+    메서드가 전부가 추상 메서드
+
+    `pulbic` `static` `final` `abstract`는 생략이 가능
+
+- 인터페이스의 상속
+
+    인터페이스의 조상은 인터페이스만 가능
+
+    Object가 최고 조상 아님
+
+    ```java
+    interface Movable /* extends Object 안들어감*/{
+    void move (int x, int y);
+    }
+
+    다중 상속이 가능
+
+    interface Fightable extends Movable, Attackable {}
+    
+    추상메서드는 충돌해도 문제가 없기 때문에 
+    다중 상속이 문제가 안된다
+
+    구현부에 충돌이 발생하는데 
+    인터페이스의 추상 메서드는 구현이 없으니까
+    다중 상속이 가능
+    ```
+
+- 인터페이스의 구현
+
+    인터페이스에 정의된 추상 메서드를 완성하는 것
+
+    미완성 설계도이므로 객체를 못 만든다
+
+    ```java
+    class 클래스이름 implements 인터페이스이름 {
+        
+    }
+
+    상속을 통해 완성
+
+    추상클래스는 extends를 사용하지만
+
+    인터페이스는 implements(구현)를 사용
+    ```
+
+    ex)
+    ```java
+    interface Fightable {
+        void move(int x, int y);
+        void attack(Unit u);
+    }
+
+    class Fighter implements Fightable {
+        public void move(int x, int y){/* ... */}
+        public void attack(Unit u){/* ... */}
+    }
+
+    abstract class Fighter implements Fightable {
+        public void move(int x, int y){/* ... */}
+
+        // 안보이지만
+        // public abstract void attack(Unit u)
+    }
+    하나만 구현했으면 당연히 abstract
+    ```
+
+    추상클래스와 인터페이스는 extends 와 implements의 차이일 뿐
+
+    추상메서드를 가지고 있다는 공통점이 있다
+
+    추상 클래스 구현
+    ```java
+    class AudioPlayer extends Player {
+        void play(int pos){/* ... */}
+        void stop(){/* ... */}
+    }
+
+    ```
+
+    interface 구현
+    ```java
+    class Fighter implements Fightable {
+        public void move(int x, int y){/* ... */}
+        public void attack(Unit u){/* ... */}
+    ```
+
+    인터페이슨 iv를 가질 수 없다
+
+    오직 `추상메서드`(또는 상수, static 메서드, 디폴트 메서드)만 가진다
+
+- 인터페이스를 이용한 다형성
+
+    인터페이스도 구현 클래스의 부모로 친다
+
+    ```java
+    class Fighter extends Unit implements Fightable {
+        public void move(int x, int y){/* ... */}
+
+        public void attack(Fightable f){/* ... */}
+        매개변수는 인터페이스를 구현한 것들만 들어올 수 있다
+
+        Unit u = new Fighter();
+        조상 - 자손 객체
+
+        Fightable f = new Fighter();
+        인터페이스도 가능
+    }
+    ```
+    매개변수의 타입이 인터페이스인 경우가 어떤 의미인가
+
+    -> 인터페이스를 구현한 클래스의 인스턴스만 가능하다는 뜻
+
+    인터페이스를 메서드의 리턴타입으로 지정할 수 있다
+
+    ```java
+    Fightable method() {
+        Fighter f = new Fighter();
+        return f;
+    }
+
+    class Fighter extends Unit implements Fightable {
+        public void move(int x, int y) {/* ... */}
+        public void attack(Fightable f) {/* ... */}
+    }
+
+    매개변수에 fightable f = method();
+    즉, fightable f = new Fighter();
+    ```
+    [interface_fighter]()
+
+- 인터페이스의 장점
+
+    _두 객체 간의 연결, 대화, 소통을 돕는 중간 역할을 한다_
+
+    _선언과 구현을 분리시킬 수 있다_
+
+    ```java
+    class B {
+        public void method() {
+            sout("methodInB");
+        }
+    }
+
+    를 선언과 구현으로 분리시키면
+
+    껍데기
+    interface I {
+        public void method();
+    }
+
+    알맹이
+    class B implements I {
+        public void method() {
+            sout("methodInB");
+        }
+    }
+    ```
+
+    선언과 구현이 분리되어 있으면 변경에 용이
+
+    알맹이만 다른것으로 바꿀 수 있다
+
+    A가 B를(에) 사용(의존)한다
+
+    A : 인터페이스, B : 구현 class
+
+    1. 인터페이스가 없을 경우
+
+        ```java
+        class A {
+            public void methodA(B b) {
+                b.methodB;
+            }
+        }
+
+        class B {
+            public void methodB() {
+                sout("methodB()");
+            }
+        }
+
+        class InterfaceTest {
+            public static void main(String args[]) {
+                A a = new A();
+                a.methodA(new B())
+            }
+        }
+        ```
+
+    2. 인터페이스가 있을 경우
+
+        ```java
+        class A {
+            public void methodA(I i) {
+                i.methodB;
+            }
+        }
+
+        interface I {void methodB(); }
+        
+        class B implements I {
+            public void methodB() {
+                sout("methodB()");
+            }
+        }
+
+        추가 가능
+        class C implements I {
+            public void methodB() {
+                sout("methodB() in C");
+            }
+        }
+        ```
+        A를 변경하지 않아도 된다
+
+    [interface_test]()
+
+    1. 개발 시간을 단축할 수 있다
+
+        A가 B에 의존하려면 B가 완성되어야 한다
+
+        interface가 있으면 A는 껍데기 I만 있으면 된다
+
+    2. 변경에 유리한 유연한 설계가 가능하다
+
+    3. 표준화가 가능하다
+
+    4. 서로 관계 없는 클래스끼리 관계를 맺어줄 수 있다
+
+        [사진]
+
+        [사진]
+
+        매개변수에 인터페이스가 들어가 있는 것은
+
+        해당 인터페이스가 구현된 class만 들어올 수 있다는 뜻
+
+        
+
