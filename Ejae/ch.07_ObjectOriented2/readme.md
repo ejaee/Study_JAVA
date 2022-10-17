@@ -886,7 +886,7 @@ public class Time {
     매개변수에 fightable f = method();
     즉, fightable f = new Fighter();
     ```
-    [interface_fighter]()
+    [interface_fighter](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/interface_fighter/src/Main.java)
 
 - 인터페이스의 장점
 
@@ -973,7 +973,7 @@ public class Time {
         ```
         A를 변경하지 않아도 된다
 
-    [interface_test]()
+    [interface_test](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/interface_test/src/Main.java)
 
     1. 개발 시간을 단축할 수 있다
 
