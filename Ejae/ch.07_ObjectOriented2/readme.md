@@ -202,9 +202,9 @@ _코드의 중복을 최소화_
     super()는 Object()를 의미한다
 ```
 
-- 패키지(package)
+## 패키지(package)
 
-    _클래스의 묶음_
+- 클래스의 묶음
 
     클래스 또는 인터페이스르 포함시킬 수 있다
 
@@ -236,9 +236,9 @@ _코드의 중복을 최소화_
     패키지 선언이 없으면 이름없는 패키지에 속한다(default package)
 
 
-- import
+## import
 
-    클래스를 사용할 때 `패키지 아름을 생략`할 수 있다
+- 클래스를 사용할 때 `패키지 아름을 생략`할 수 있다
 
     import 미사용
     ```java
@@ -298,9 +298,9 @@ _코드의 중복을 최소화_
     ->  out.println(random());
     ```
 
-- 제어자(modifier)
+## 제어자(modifier)
 
-    _클래스와 클래스 멤버에 부가적인 의미 부여_
+- 클래스와 클래스 멤버에 부가적인 의미 부여
 
     `접근제어자` 와 
     
@@ -417,9 +417,9 @@ public class Time {
 [acess_modifier_encapsulation](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/acess_modifier_encapsulation/src/Main.java)
 
 
-- 다형성(polymorphism)
+## 다형성(polymorphism)
 
-    _여러 가지 형태를 가질 수 있는 능력_
+- 여러 가지 형태를 가질 수 있는 능력
 
     `조상 타입 참조 변수로 자손 타입 객체를 다루는 것`
 
@@ -603,9 +603,9 @@ public class Time {
         }
         ```
 
-- 추상 클래스(abstract class)
+## 추상 클래스(abstract class)
 
-    _미완성 메서드를 갖고 있는 클래스_
+- 미완성 메서드를 갖고 있는 클래스
 
     미완성 설계도
 
@@ -719,9 +719,9 @@ public class Time {
 
     [abstract_unit](https://github.com/ejaee/Study_JAVA/blob/main/Ejae/ch.07_ObjectOriented2/abstract_unit/src/Main.java)
 
-- 인터페이스(interface)
+## 인터페이스(interface)
 
-    _추상 메서드의 집합_
+- 추상 메서드의 집합
 
     구현된 없이 전혀 없는 설계도. 껍데기(모든 멤버가 public)
 
@@ -1041,4 +1041,3 @@ public class Time {
 
     외운다는 느낌 보다는 직접 오버라이딩 하면 된다
 
-    
