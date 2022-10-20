@@ -150,7 +150,7 @@ public class Main {
 		String b = "str";
 
 		System.out.println(System.identityHashCode(a));	//result:2008362258
-		System.out.println(System.identityHashCode(b)); 	//result:2008362258
+		System.out.println(System.identityHashCode(b)); //result:2008362258
 	}
 }
 ```
