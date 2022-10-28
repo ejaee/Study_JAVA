@@ -798,9 +798,11 @@ public class Time {
     ```
     모든 interface의 멤버는 public
 
-    메서드가 전부가 추상 메서드
+    메서드 전부 추상 메서드
 
     `pulbic` `static` `final` `abstract`는 생략이 가능
+    
+    _항상 pulic이고 abstract이니까_
 
 - 인터페이스의 상속
 
@@ -809,6 +811,8 @@ public class Time {
     Object가 최고 조상 아님
 
     ```java
+    class Tv extends Object {}
+
     interface Movable /* extends Object 안들어감*/{
     void move (int x, int y);
     }
